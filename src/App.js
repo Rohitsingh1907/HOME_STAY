@@ -4,6 +4,7 @@ import FlatPage from "./pages/FlatPage.js";
 import Home from "./pages/Home.js";
 import HomeStays from "./pages/HomeStay.js";
 import PgPage from "./pages/PgPage.js";
+import FlatCard from "./components/FlatCard.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/flat" element={<FlatPage />} />
         <Route path="/pg" element={<PgPage />} />
         <Route path="/homestays" element={<HomeStays />} />
+        <Route path="/flats" element={<FlatCard />} />
       </Routes>
     </BrowserRouter>
   );
