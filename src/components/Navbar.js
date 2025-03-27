@@ -2,12 +2,15 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-gray-800 p-4 text-xl">
       <div className="container mx-auto flex justify-between items-center">
+        {/* Logo on the left */}
         <div className="text-white text-2xl font-bold">
           <a href="/">Logo</a>
         </div>
-        <div className="hidden md:flex space-x-4">
+
+        {/* Centered Navigation Links */}
+        <div className="lg:flex-grow xl:flex-grow xl:flex lg:flex lg:justify-center xl:justify-center space-x-4 hidden lg:block xl:block">
           <a
             href="/flats"
             className="text-white hover:bg-gray-700 px-3 py-2 rounded"
@@ -26,31 +29,13 @@ const Navbar = () => {
           >
             HomeStays
           </a>
-          <a
-            href="/login"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded"
-          >
+        </div>
+
+        {/* Login Button on the right */}
+        <div className="text-white">
+          <a href="/login" className="bg-gray-700 px-3 py-2 rounded">
             Login
           </a>
-        </div>
-        <div className="md:hidden">
-          <button className="text-white focus:outline-none">
-            {/* Hamburger Icon */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </nav>
